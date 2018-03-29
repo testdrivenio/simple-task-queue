@@ -2,12 +2,12 @@
 
 import redis
 
-from redis_queue import Queue
+from redis_queue import SimpleQueue
 
 
 def worker():
     r = redis.Redis()
-    queue = Queue(r, 'sample')
+    queue = SimpleQueue(r, 'sample')
     if queue.get_length() > 0:
         queue.dequeue()
     else:

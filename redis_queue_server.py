@@ -4,7 +4,7 @@ import os
 import logging
 import multiprocessing
 
-from tasks import count_words
+from tasks import get_word_counts
 from redis_queue_worker import worker
 
 

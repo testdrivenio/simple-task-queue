@@ -1,6 +1,8 @@
-# simple_task_queue.py
+# simple_task_queue_logging.py
 
+import os
 import time
+import logging
 import multiprocessing
 
 from tasks import get_word_counts
@@ -10,10 +12,27 @@ PROCESSES = multiprocessing.cpu_count() - 1
 NUMBER_OF_TASKS = 10
 
 
+def create_logger():
+    logger = multiprocessing.get_logger()
+    logger.setLevel(logging.INFO)
+    fh = logging.FileHandler('process.log')
+    fmt = '%(asctime)s - %(levelname)s - %(message)s'
+    formatter = logging.Formatter(fmt)
+    fh.setFormatter(formatter)
+    logger.addHandler(fh)
+    return logger
+
+
 def process_tasks(task_queue):
+    logger = create_logger()
+    proc = os.getpid()
     while not task_queue.empty():
-        book = task_queue.get()
-        get_word_counts(book)
+        try:
+            book = task_queue.get()
+            get_word_counts(book)
+        except Exception as e:
+            logger.error(e)
+        logger.info(f'Process {proc} completed successfully')
     return True
 
 
@@ -32,7 +51,7 @@ def run():
     processes = []
     print(f'Running with {PROCESSES} processes!')
     start = time.time()
-    for n in range(PROCESSES):
+    for w in range(PROCESSES):
         p = multiprocessing.Process(
             target=process_tasks, args=(full_task_queue,))
         processes.append(p)
