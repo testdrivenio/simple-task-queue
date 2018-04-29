@@ -58,7 +58,7 @@ def run():
         p.start()
     for p in processes:
         p.join()
-    print('Time taken = {0:.10f}'.format(time.time() - start))
+    print(f'Time taken = {time.time() - start:.10f}')
 
 
 if __name__ == '__main__':
