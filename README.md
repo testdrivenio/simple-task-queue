@@ -34,24 +34,24 @@ $ python simple_pool.py
 Multiprocessing Queue:
 
 ```sh
-$ simple_queue.py
-$ simple_task_queue.py
+$ python simple_queue.py
+$ python simple_task_queue.py
 ```
 
 Logging to a single file:
 
 ```sh
-$ simple_task_queue_logging.py
+$ python simple_task_queue_logging.py
 ```
 
 Logging to separate files:
 
 ```sh
-$ simple_task_queue_logging_separate_files.py
+$ python simple_task_queue_logging_separate_files.py
 ```
 
 Redis:
 
 ```sh
-$ redis_queue.py
+$ python redis_queue.py
 ```
