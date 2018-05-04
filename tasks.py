@@ -5,6 +5,7 @@ import json
 import time
 import uuid
 import collections
+import sys
 
 from nltk.corpus import stopwords
 
@@ -38,4 +39,4 @@ def get_word_counts(filename):
 
 
 if __name__ == '__main__':
-    get_word_counts()
+    get_word_counts(sys.argv[1])
