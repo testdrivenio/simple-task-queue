@@ -8,7 +8,7 @@ from tasks import get_word_counts
 from redis_queue_worker import worker
 
 
-PROCESSES = 6
+PROCESSES = 4
 
 
 def run():

@@ -8,7 +8,7 @@ def run():
         'pride-and-prejudice.txt',
         'heart-of-darkness.txt',
         'frankenstein.txt',
-        'drakula.txt'
+        'dracula.txt'
     ]
     queue = multiprocessing.Queue()
 

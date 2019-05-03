@@ -1,11 +1,11 @@
 # tasks.py
 
 import os
+import sys
 import json
 import time
 import uuid
 import collections
-import sys
 
 from nltk.corpus import stopwords
 
