@@ -1,8 +1,7 @@
 # redis_queue.py
 
-
-import uuid
 import pickle
+import uuid
 
 
 class SimpleQueue(object):

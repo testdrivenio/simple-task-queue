@@ -17,6 +17,7 @@ Several implementations of asynchronous task queues in Python using the multipro
     ```sh
     >> import nltk
     >> nltk.download('stopwords')
+
       [nltk_data] Downloading package stopwords to
       [nltk_data]     /Users/michael.herman/nltk_data...
       [nltk_data]   Unzipping corpora/stopwords.zip.
