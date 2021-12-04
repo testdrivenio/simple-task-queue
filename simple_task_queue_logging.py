@@ -40,7 +40,7 @@ def add_tasks(task_queue, number_of_tasks):
         task_queue.put("pride-and-prejudice.txt")
         task_queue.put("heart-of-darkness.txt")
         task_queue.put("frankenstein.txt")
-        task_queue.put("drakula.txt")
+        task_queue.put("dracula.txt")
     return task_queue
 
 
